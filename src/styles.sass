@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@use './app/styles/_reset' as *
+@use './app/styles/_variables' as *
+@use './app/styles/_mixins' as *
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+:root
+    @include light-theme
+
+    &[data-theme='dark']
+        @include dark-theme
+
+    @media (prefers-color-scheme:dark)
+        &:not([data-theme])
+            @include dark-theme
+
+
+body
+    background-color: var(--background-color)
+    color: var(--text-primary)
+    font-family: $sans-serif-font
+            

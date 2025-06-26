@@ -1,0 +1,28 @@
+@use './_variables' as *
+
+@mixin flex($direction: row, $justify: flex-start, $gap: 0, $align: stretch) 
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $align
+    gap: $gap
+
+@mixin light-theme
+    --background-color: #{$neutral-0}
+    --background-secondary: #{$neutral-100}
+    --background-tertiary: #{$neutral-200}
+    --text-primary: #{$neutral-800}
+    --text-secondary: #{$neutral-600}
+    --text-bold: #{$neutral-950}
+    --text-semi-bold: #{$neutral-700}
+
+@mixin dark-theme
+    --background-color: #{$neutral-950}
+    --background-secondary: #{$neutral-800}
+    --background-tertiary: #{$neutral-700}
+    --text-primary: #{$neutral-100}
+    --text-secondary: #{$neutral-300}
+    --text-bold: #{$neutral-0}
+    --text-semi-bold: #{$neutral-200}
+
+
